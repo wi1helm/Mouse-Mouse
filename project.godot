@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mouse-Mouse"
-run/main_scene="uid://djl5r670gxnri"
+run/main_scene="uid://c57my6300j50h"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

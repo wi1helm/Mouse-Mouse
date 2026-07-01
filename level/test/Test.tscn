@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://djl5r670gxnri"]
+
+[sub_resource type="Environment" id="Environment_o43f5"]
+
+[node name="Test" type="Node3D" unique_id=1307694157]
+
+[node name="Test" type="CSGCombiner3D" parent="." unique_id=1106003358]
+use_collision = true
+
+[node name="Floor" type="CSGBox3D" parent="Test" unique_id=398953453]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.689087, 0, 0)
+use_collision = true
+size = Vector3(32.855713, 1, 100)
+
+[node name="Wall" type="CSGBox3D" parent="Test" unique_id=1318254647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 4.742676, 0)
+size = Vector3(1, 8.5, 100)
+
+[node name="Hole" type="CSGCylinder3D" parent="Test/Wall" unique_id=1631055637]
+transform = Transform3D(0.12502703, -1.0987482, 0, 4.817818, 0.028513577, 0, 0, 0, 5.452752, 0, -3, 30)
+operation = 2
+height = 1.358
+sides = 23
+
+[node name="Wall2" type="CSGBox3D" parent="Test" unique_id=941809248]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.056306124, 4.626709, 49.502743)
+size = Vector3(9.9364395, 8.753418, 1)
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=436020568]
+transform = Transform3D(-0.5818708, -0.68248606, 0.4423112, -0.12260531, 0.61125636, 0.7818783, -0.80398655, 0.4007224, -0.43934864, 3.0452557, 16.975048, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1596660346]
+environment = SubResource("Environment_o43f5")
