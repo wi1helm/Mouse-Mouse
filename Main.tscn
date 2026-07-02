@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c57my6300j50h"]
 
+[ext_resource type="Script" uid="uid://54tmcxvrd7bs" path="res://Main.gd" id="1_glv2v"]
+
 [node name="Main" type="Node" unique_id=545673721]
+script = ExtResource("1_glv2v")
 
 [node name="Systems" type="Node" parent="." unique_id=64748301]
 
