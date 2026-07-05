@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c57my6300j50h"]
+
+[ext_resource type="Script" uid="uid://54tmcxvrd7bs" path="res://core/Main.gd" id="1_rw80f"]
+
+[node name="Main" type="Node" unique_id=545673721]
+script = ExtResource("1_rw80f")
+
+[node name="Systems" type="Node" parent="." unique_id=64748301]
+
+[node name="World" type="Node3D" parent="." unique_id=629374574]
+
+[node name="Levels" type="Node3D" parent="World" unique_id=1164310851]
+
+[node name="Entities" type="Node3D" parent="World" unique_id=467639504]
+
+[node name="Effects" type="Node3D" parent="World" unique_id=196801273]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=393739422]
