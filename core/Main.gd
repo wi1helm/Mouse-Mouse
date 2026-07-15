@@ -10,7 +10,7 @@ func _ready() -> void:
 	context.entities = $World/Entities
 	context.effects = $World/Effects
 
-	#current_state = StartState.new(context)
+	#current_state = StartState.new(context) //TODO add back this and make cool animation etc.
 	current_state = MainMenuState.new(context)
 	current_state.enter()
 

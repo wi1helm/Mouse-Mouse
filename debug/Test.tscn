@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://djl5r670gxnri"]
 
-[ext_resource type="Script" uid="uid://df5al4bcwjjm3" path="res://debug/Test.gd" id="1_4krm5"]
+[ext_resource type="Script" uid="uid://df5al4bcwjjm3" path="res://debug/Test.gd" id="1_wdxnk"]
 
 [sub_resource type="Environment" id="Environment_o43f5"]
 
 [node name="Test" type="Node3D" unique_id=1307694157]
-script = ExtResource("1_4krm5")
+script = ExtResource("1_wdxnk")
 
 [node name="Test" type="CSGCombiner3D" parent="." unique_id=1106003358]
 use_collision = true
