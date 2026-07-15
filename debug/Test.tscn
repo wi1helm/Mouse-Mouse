@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://djl5r670gxnri"]
 
-[ext_resource type="Script" uid="uid://df5al4bcwjjm3" path="res://levels/Test.gd" id="1_4krm5"]
+[ext_resource type="Script" uid="uid://df5al4bcwjjm3" path="res://debug/Test.gd" id="1_4krm5"]
 
 [sub_resource type="Environment" id="Environment_o43f5"]
 

@@ -1,22 +1,16 @@
 class_name StartState
 extends State
 
-# Hardcoded path to your screen scene so it can be loaded on demand
+# Hardcoded path to scene so it can be loaded on demand
 const START_SCREEN_SCENE = preload("res://core/start/StartScreen.tscn")
 
 var screen_instance: Control = null
 var animation_player: AnimationPlayer = null
-var ui_layer: CanvasLayer = null
+var context: Context = null
 
 func _init(context: Context) -> void:
-	if context == null: return
-		
-	# Convert (cast) the generic Context into a StartContext
-	var start_context: StartContext = context as StartContext
-	if start_context == null: return
-	
-	# Use your getter to pull out the UI Layer safely
-	self.ui_layer = start_context.get_ui_layer()
+	if (context == null): return
+	self.context = context;
 	
 func enter() -> void:
 	# Load the start scene
@@ -26,7 +20,7 @@ func enter() -> void:
 		return
 	
 	# Add start screen to ui layer
-	ui_layer.add_child(screen_instance)
+	context.ui_layer.add_child(screen_instance)
 	
 	# Get the animator
 	animation_player = screen_instance.get_node_or_null("AnimationPlayer")
@@ -69,4 +63,4 @@ func exit() -> State:
 	# Clean up and free the instantiated scene when moving away from this state
 	if (screen_instance != null):
 		screen_instance.queue_free()
-	return null
+	return MainMenuState.new(self.context)

@@ -81,7 +81,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.15122095, 0.16020396, 0.16547003, 1)
+color = Color(0.1487391, 0.15642977, 0.16027501, 1)
 
 [node name="Credits" type="VBoxContainer" parent="." unique_id=1183368236]
 modulate = Color(1, 1, 1, 0)

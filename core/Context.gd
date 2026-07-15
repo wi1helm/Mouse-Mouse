@@ -1,6 +1,8 @@
 class_name Context
 
-var id: String
-
-func _init(id: String) -> void:
-	self.id = id
+# A class (more like a struct) for holding static refrences to the node tree in main scene.
+# Due to the State Class not extending node getting nodes by $UI or $World/Levels is not possible.
+var ui_layer: CanvasLayer
+var levels: Node3D
+var entities: Node3D
+var effects: Node3D

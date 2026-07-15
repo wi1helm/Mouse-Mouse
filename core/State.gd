@@ -13,3 +13,11 @@ func process(_delta: float) -> void:
 
 func exit() -> State:
 	return null
+
+# Returns true if value is null. Logs + flags should_exit if not.
+func is_null(value: Object, message: String) -> bool:
+	if value == null:
+		push_error(message)
+		should_exit = true
+	return value == null
+	

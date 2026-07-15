@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cbxp77gh5a46k"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_a6ckl"]
+sky_top_color = Color(0.47467363, 0.43946105, 0.43656287, 1)
+sky_horizon_color = Color(0.685058, 0.66850483, 0.6587802, 1)
+ground_horizon_color = Color(0.685058, 0.66850483, 0.6587802, 1)
+
+[sub_resource type="Sky" id="Sky_pag55"]
+sky_material = SubResource("ProceduralSkyMaterial_a6ckl")
+
+[sub_resource type="Environment" id="Environment_p5wqi"]
+background_mode = 2
+sky = SubResource("Sky_pag55")
+glow_enabled = true
+
+[node name="MainMenu" type="Node3D" unique_id=420263384]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=7466660]
+transform = Transform3D(-0.64278764, -0.4093376, 0.64750814, 0, 0.8452619, 0.5343523, -0.76604444, 0.34347504, -0.5433239, 0, 0, 0)
+light_color = Color(0.9732651, 0.828683, 0.48404884, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2096694837]
+environment = SubResource("Environment_p5wqi")
+
+[node name="Room" type="CSGCombiner3D" parent="." unique_id=1617033719]
+
+[node name="Floor" type="CSGBox3D" parent="Room" unique_id=1701715411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1242676, 0, -0.8095169)
+size = Vector3(11.594238, 1, 9.926102)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Room" unique_id=439484721]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0936279, 1.3578968, -3.9067974)
+size = Vector3(11.656982, 1.8769531, 1)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=425209179]
+transform = Transform3D(0.88438874, -0.1815884, 0.4299794, -0.017152114, 0.9079516, 0.4187239, -0.46643582, -0.37768972, 0.7998675, 1.9920301, 5.7860346, 7.366373)
